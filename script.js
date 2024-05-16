@@ -1,7 +1,17 @@
 function obtenerValores() {
     let ingresoDatos = document.getElementById('dato').value;
+    
+    if (ingresoDatos.trim() === "") {
+        document.getElementById('resultado').innerHTML = "Por favor, ingresa una lista de números.";
+        return;
+    }
 
     let valores = ingresoDatos.split(',').map(Number);
+
+    if (valores.some(isNaN)) {
+        document.getElementById('resultado').innerHTML = "Por favor, ingresa solo números separados por comas.";
+        return;
+    }
     
     let resultado = ordenarNumeros(valores);
 
