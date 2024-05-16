@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ORDENAR PARES E INPARES</h1>
+    <form onsubmit="obtenerValores(); return false;">
+        <label for="ingresoDato">Ingrese los numeros separados por comas(,):</label>
+        <input type="text" id="dato" class="texto" placeholder="Ingrese numeros aqui" name="ingresoDato" required>
+        <input type="submit" value="Ordenar" class="boton">
+    </form>
+
+    <div>
+        <h2>Resultado:</h2>
+        <p id="resultado"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
